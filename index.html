@@ -4,29 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Airia Chat</title>
-
     <style>
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background: #f7f7f7;
-      }
-
-      /* Container Power BI will see */
-      #chat-container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      html, body { height: 100%; margin: 0; }
+      /* If the widget floats, give it space */
+      #root { height: 100%; }
     </style>
   </head>
-
   <body>
-    <div id="chat-container"></div>
+    <div id="root"></div>
 
     <script type="module">
       import AiriaChat from "https://embed-api.airia.ai/get-chat-embed.js";
@@ -35,16 +20,9 @@
         pipelineId: "2375f956-efb9-4d21-bffa-ed304a10a6b2",
         apiKey: "ak-MzI5NjcwNDA2M3wxNzY1OTIzMjA0NzM5fHRpLVFtRnljbmtnVlc1cGRtVnljMmwwZVE9PXwxfDIyNzk4NjUyMTUg",
         apiUrl: "https://embed-api.airia.ai",
-
-        // IMPORTANT SETTINGS
-        autoOpen: true,
-        docked: false,        // disable side docking
-        fullScreen: true,     // force large layout
-        position: "center",   // center the chat
-
-        greeting: "Hello! How can I assist you today?"
+        greeting: "Hello! How can I assist you today?",
+        autoOpen: true
       });
     </script>
   </body>
 </html>
-
