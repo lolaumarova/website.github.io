@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airia Chat</title>
+    <style>
+      html, body { height: 100%; margin: 0; }
+      /* If the widget floats, give it space */
+      #root { height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      import AiriaChat from "https://embed-api.airia.ai/get-chat-embed.js";
+
+      AiriaChat.init({
+        pipelineId: "2375f956-efb9-4d21-bffa-ed304a10a6b2",
+        apiKey: "ak-MzI5NjcwNDA2M3wxNzY1OTIzMjA0NzM5fHRpLVFtRnljbmtnVlc1cGRtVnljMmwwZVE9PXwxfDIyNzk4NjUyMTUg",
+        apiUrl: "https://embed-api.airia.ai",
+        greeting: "Hello! How can I assist you today?",
+        autoOpen: true
+      });
+    </script>
+  </body>
+</html>
